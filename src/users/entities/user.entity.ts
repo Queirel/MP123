@@ -12,7 +12,7 @@ export class User {
     @OneToMany(
         ()=> Product,
         (product)=> product.user,
-
+        {cascade: true}
     )
-    product?:Product
+    products:Product
 }
